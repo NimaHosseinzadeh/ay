@@ -1,0 +1,176 @@
+/* Aynim - Responsive styles */
+
+/* Tablet */
+@media (max-width: 1100px) {
+  body {
+    min-width: 0;
+  }
+
+  :root {
+    --container: 100%;
+  }
+
+  .container {
+    padding-inline: 1.5rem;
+  }
+
+  .header__top {
+    gap: 1rem;
+  }
+
+  .nav {
+    gap: 1rem;
+  }
+
+  .nav__list {
+    gap: 1rem;
+  }
+}
+
+/* Small tablet */
+@media (max-width: 850px) {
+  .container {
+    padding-inline: 1.25rem;
+  }
+
+  .header__top {
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+  }
+
+  .header__logo img {
+    height: 3.5rem;
+  }
+
+  .header__actions {
+    gap: 0.6rem;
+  }
+
+  .search {
+    order: 3;
+    flex: 1 0 100%;
+    max-width: none;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding-top: 0.5rem;
+  }
+
+  .nav__list {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    margin-inline-end: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .container {
+    padding-inline: 0.9rem;
+  }
+
+  body {
+    font-size: 0.85rem;
+  }
+
+  .header {
+    padding-bottom: 0.75rem;
+  }
+
+  .header__top {
+    gap: 0.75rem;
+    padding-block: 0.75rem;
+  }
+
+  .header__logo img {
+    height: 3rem;
+    margin-block: 0;
+  }
+
+  .header__actions {
+    gap: 0.5rem;
+  }
+
+  .icon-btn svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .header__actions .btn--sm {
+    padding: 0.4rem 0.55rem;
+    font-size: 0.7rem;
+  }
+
+  .cart img {
+    width: 1.5rem;
+  }
+
+  .search {
+    height: 2.6rem;
+  }
+
+  .search__input {
+    min-width: 0;
+    padding-inline: 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .search__btn {
+    width: 2.6rem;
+    flex-shrink: 0;
+  }
+
+  .nav {
+    justify-content: space-between;
+    gap: 0.6rem;
+  }
+
+  .nav > .btn {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.72rem;
+  }
+
+  .nav__list {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-block: 0.25rem;
+    white-space: nowrap;
+    scrollbar-width: thin;
+  }
+
+  .nav__list a {
+    font-size: 0.75rem;
+  }
+
+  .nav__list img {
+    width: 0.95rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .container {
+    padding-inline: 0.7rem;
+  }
+
+  .header__actions {
+    gap: 0.35rem;
+  }
+
+  .header__actions .btn--sm {
+    padding-inline: 0.45rem;
+    font-size: 0.65rem;
+  }
+
+  .nav > .btn {
+    padding-inline: 0.5rem;
+    font-size: 0.65rem;
+  }
+}

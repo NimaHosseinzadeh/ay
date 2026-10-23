@@ -1,0 +1,304 @@
+/* --------------------------------------------------------------------------
+   Fonts
+   -------------------------------------------------------------------------- */
+@font-face {
+  font-family: "Dana";
+  src: url("../assets/fonts/DanaFaNum-Regular.woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Dana";
+  src: url("../assets/fonts/DanaFaNum-Medium.woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Dana";
+  src: url("../assets/fonts/DanaFaNum-Bold.woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Dana";
+  src: url("../assets/fonts/DanaFaNum-Black.woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+
+/* --------------------------------------------------------------------------
+   Tokens
+   -------------------------------------------------------------------------- */
+:root {
+  --primary: #7b4fd0;
+  --primary-dark: #5b35a8;
+  --purple: #8a56c2;
+  --green: #52c08f;
+  --blue: #4a6a96;
+  --dark: #1c1c1c;
+  --text: #222;
+  --background :#F9F2F2;
+  --muted: #888;
+  --border: #e3e3e3;
+  --radius: 0.75rem;
+  --container: 72rem;
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 68rem;
+  font-family: "Dana", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: #fff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input {
+  font: inherit;
+  border: 0;
+  outline: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.section {
+  margin-top: 3rem;
+}
+
+.section__title {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 0.5rem;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn img {
+  width: 1.1rem;
+}
+
+.btn--sm {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.8rem;
+}
+
+.btn--primary {
+  background: var(--primary);
+}
+
+.btn--primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn--dark {
+  background: var(--dark);
+}
+
+.btn--dark:hover {
+  background: #444;
+}
+
+.btn--success {
+  background: #4ecb71;
+}
+
+.btn--success:hover {
+  background: #3bb15d;
+}
+
+/* White icons on dark buttons */
+.btn--primary img,
+.btn--dark img {
+  filter: invert(1);
+}
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+.header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 1rem;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.header__logo img {
+  height: 4rem;
+  width: auto;
+  display: block;
+  margin-block: -1.5rem;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.icon-btn {
+  display: grid;
+  background: none;
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+.icon-btn svg {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.icon-btn:hover {
+  color: #e0245e;
+}
+
+/* Search */
+.search {
+  display: flex;
+  flex: 1;
+  max-width: 32rem;
+  overflow: hidden;
+  background: #efefef;
+  border-radius: 0.5rem;
+}
+
+.search__input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  background: var(--background);
+}
+
+.search__btn {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  background: var(--primary);
+  transition: background 0.2s;
+}
+
+.search__btn:hover {
+  background: var(--primary-dark);
+}
+
+.search__btn img {
+  width: 1.2rem;
+  filter: invert(1);
+}
+
+/* Cart */
+.cart {
+  position: relative;
+}
+
+.cart img {
+  width: 1.8rem;
+}
+
+.cart__count {
+  position: absolute;
+  top: -0.4rem;
+  right: -0.4rem;
+  display: grid;
+  place-items: center;
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.65rem;
+  color: #fff;
+  background: #e0245e;
+  border-radius: 50%;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav__list {
+  display: flex;
+  gap: 1.75rem;
+  margin-inline-end: auto;
+}
+
+.nav__list a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s;
+}
+
+.nav__list a:hover {
+  color: var(--primary);
+}
+
+.nav__list img {
+  width: 1.1rem;
+}
