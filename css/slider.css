@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Aynim - sliders (js/slider.js and js/showcase.js)
+   ========================================================================== */
+
+/* Every slide fades in when it becomes visible */
+.hero__slide {
+  animation: slide-fade 0.6s;
+}
+
+.hero__slide[hidden] {
+  display: none;
+}
+
+/* Dots: first dot (slide 1) stays on the left side */
+.dots {
+  direction: ltr;
+}
+
+.dots__item {
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.dots__item:hover {
+  transform: scale(1.3);
+}
+
+/* Product rows (جدیدترین‌ها / تخفیفات): cards outside the window are hidden by JS */
+.card[hidden] {
+  display: none;
+}
+
+.showcase.is-sliding .card {
+  animation: card-in 0.4s;
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateX(-1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slide-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__slide,
+  .showcase.is-sliding .card {
+    animation: none;
+  }
+}

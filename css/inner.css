@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Aynim - shared styles of the inner pages
+   (active menu link, breadcrumb and the page title row)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Shared (used on inner pages)
+   -------------------------------------------------------------------------- */
+/* Active link in the main navigation */
+.nav__list .is-active {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.breadcrumb {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.breadcrumb li + li::before {
+  content: "/";
+  margin-inline: 0.5rem;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary);
+}
+
+/* --------------------------------------------------------------------------
+   Page head
+   -------------------------------------------------------------------------- */
+.page-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-block: 1rem 1.5rem;
+}
+
+.page-head__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.page-head__count {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Form controls use the site font (select and textarea do not inherit it by default) */
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  border: 0;
+  outline: 0;
+}
+
+select option {
+  font: inherit;
+}

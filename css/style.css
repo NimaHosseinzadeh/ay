@@ -7,28 +7,28 @@
    -------------------------------------------------------------------------- */
 @font-face {
   font-family: "Dana";
-  src: url("../assets/fonts/DanaFaNum-Regular.ttf");
+  src: url("../assets/fonts/DanaFaNum-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Dana";
-  src: url("../assets/fonts/DanaFaNum-Medium.ttf");
+  src: url("../assets/fonts/DanaFaNum-Medium.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Dana";
-  src: url("../assets/fonts/DanaFaNum-Bold.ttf");
+  src: url("../assets/fonts/DanaFaNum-Bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Dana";
-  src: url("../assets/fonts/DanaFaNum-Black.ttf");
+  src: url("../assets/fonts/DanaFaNum-Black.woff2") format("woff2");
   font-weight: 900;
   font-display: swap;
 }

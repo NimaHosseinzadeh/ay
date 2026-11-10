@@ -1,0 +1,239 @@
+/* ==========================================================================
+   Aynim - info pages: order success, 404, partnership and user guide
+   (partnership and guide also load auth.css for the .field inputs)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Notice card (order success and 404)
+   -------------------------------------------------------------------------- */
+.notice {
+  max-width: 34rem;
+  margin: 3rem auto 0;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.notice__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  font-size: 2.6rem;
+  color: var(--primary);
+  background: #efe9fb;
+  border-radius: 50%;
+}
+
+.notice__icon--ok {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.notice__title {
+  margin-top: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.notice__text {
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
+
+.notice__info {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  text-align: right;
+  background: #f8f7fb;
+  border-radius: 0.6rem;
+}
+
+.notice__info div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.6rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.notice__info div:last-child {
+  border-bottom: 0;
+}
+
+.notice__info dt {
+  color: var(--muted);
+}
+
+.notice__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Page intro (partnership and guide)
+   -------------------------------------------------------------------------- */
+.intro {
+  max-width: 40rem;
+  margin: 1.5rem auto 2rem;
+  text-align: center;
+}
+
+.intro__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.intro__text {
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
+
+/* --------------------------------------------------------------------------
+   Partnership
+   -------------------------------------------------------------------------- */
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: 50rem;
+  margin: 0 auto 2rem;
+}
+
+.perk {
+  padding: 1.25rem;
+  text-align: center;
+  background: #f6f3fc;
+  border-radius: var(--radius);
+}
+
+.perk i {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.perk h3 {
+  margin-block: 0.4rem 0.2rem;
+  font-size: 1rem;
+}
+
+.perk p {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* Form card shared by partnership and complaint */
+.form-card {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.form-card__title {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.form-card__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.form-card__grid .wide {
+  grid-column: 1 / -1;
+}
+
+.form-card__grid .btn {
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   User guide
+   -------------------------------------------------------------------------- */
+.guide {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+.guide__block {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.guide__block:target {
+  border-color: var(--primary);
+  box-shadow: 0 4px 16px rgba(123, 79, 208, 0.15);
+}
+
+.guide__block h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.guide__block > p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.guide__steps {
+  display: grid;
+  gap: 0.6rem;
+  list-style: none;
+  counter-reset: step;
+}
+
+.guide__steps li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  counter-increment: step;
+}
+
+.guide__steps li::before {
+  content: counter(step, persian);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  color: #fff;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  .notice {
+    margin-top: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .notice__title {
+    font-size: 1.2rem;
+  }
+
+  .perks-grid,
+  .form-card__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .intro__title {
+    font-size: 1.3rem;
+  }
+}

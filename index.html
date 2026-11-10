@@ -12,146 +12,221 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/slider.css">
 </head>
 <body>
 
   <!-- Header -->
   <header class="header">
     <div class="container header__top">
-      <a href="#" class="header__logo"><img src="assets/images/aynim-high-resolution-logo.png" alt="Aynim"></a>
+      <a href="index.html" class="header__logo"><img src="assets/images/aynim-high-resolution-logo.png" alt="Aynim"></a>
 
-      <form class="search" role="search">
-        <input class="search__input" type="search" placeholder="جستجوی محصولات">
+      <form class="search" role="search" action="pages/shop.html">
+        <input class="search__input" type="search" name="q" placeholder="جستجوی محصولات">
         <button class="search__btn" aria-label="جستجو"><img src="assets/icons/search.svg" alt=""></button>
       </form>
 
       <div class="header__actions">
-        <button class="icon-btn" aria-label="علاقه‌مندی‌ها">
+        <a href="pages/wishlist.html" class="icon-btn" aria-label="علاقه‌مندی‌ها">
           <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.800-8 11-8 11z"/></svg>
-        </button>
-        <a href="#" class="btn btn--primary btn--sm"><img src="assets/icons/account.svg" alt="">ورود / ثبت نام</a>
-        <a href="#" class="cart" aria-label="سبد خرید"><img src="assets/icons/shopping-bag.svg" alt=""><span class="cart__count">۱</span></a>
+        </a>
+        <a href="pages/login.html" class="btn btn--primary btn--sm"><img src="assets/icons/account.svg" alt="">ورود / ثبت نام</a>
+        <a href="pages/cart.html" class="cart" aria-label="سبد خرید"><img src="assets/icons/shopping-bag.svg" alt=""><span class="cart__count">۱</span></a>
       </div>
     </div>
 
     <nav class="container nav">
-      <a href="#" class="btn btn--primary">دسته بندی محصولات</a>
+      <a href="pages/shop.html" class="btn btn--primary">دسته بندی محصولات</a>
       <ul class="nav__list">
-        <li><a href="#"><img src="assets/icons/home.svg" alt="">صفحه اصلی</a></li>
-        <li><a href="#"><img src="assets/icons/shop.svg" alt="">فروشگاه</a></li>
-        <li><a href="#"><img src="assets/icons/blog.svg" alt="">بلاگ</a></li>
-        <li><a href="#"><img src="assets/icons/message-chat.svg" alt="">سوالات متداول</a></li>
+        <li><a href="index.html"><img src="assets/icons/home.svg" alt="">صفحه اصلی</a></li>
+        <li><a href="pages/shop.html"><img src="assets/icons/shop.svg" alt="">فروشگاه</a></li>
+        <li><a href="pages/blog.html"><img src="assets/icons/blog.svg" alt="">بلاگ</a></li>
+        <li><a href="pages/faq.html"><img src="assets/icons/message-chat.svg" alt="">سوالات متداول</a></li>
       </ul>
-      <a href="#" class="btn btn--dark btn--sm"><img src="assets/icons/notification.svg" alt="">همکاری در فروش</a>
+      <a href="pages/partnership.html" class="btn btn--dark btn--sm"><img src="assets/icons/notification.svg" alt="">همکاری در فروش</a>
     </nav>
   </header>
 
   <main class="container">
 
-    <!-- Hero slider -->
+    <!-- Hero slider (js/slider.js) -->
     <section class="hero">
-      <img class="hero__img" src="assets/images/slider-1.jpg" alt="تخفیف ۷۰ درصدی کوتون" width="950" height="460">
-      <a href="#" class="hero__btn">انتخاب</a>
+      <div class="hero__slide">
+        <img class="hero__img" src="assets/images/slider-1.jpg" alt="تخفیف ۷۰ درصدی کوتون" width="950" height="460">
+        <a href="pages/shop-sale.html" class="hero__btn">انتخاب</a>
+      </div>
+      <div class="hero__slide" hidden>
+        <img class="hero__img" src="assets/images/slider-2.jpg" alt="کالکشن تابستانی کوتون" width="950" height="460">
+        <a href="pages/shop-sale.html" class="hero__btn">انتخاب</a>
+      </div>
+      <div class="hero__slide" hidden>
+        <img class="hero__img" src="assets/images/slider-3.jpg" alt="استایل فصل جدید کوتون" width="950" height="460">
+        <a href="pages/shop.html" class="hero__btn">انتخاب</a>
+      </div>
       <button class="hero__next" aria-label="اسلاید بعدی">&#10094;</button>
     </section>
-    <div class="dots"><span class="dots__item"></span><span class="dots__item"></span><span class="dots__item is-active"></span></div>
+    <div class="dots">
+      <button class="dots__item is-active" aria-label="اسلاید ۱"></button>
+      <button class="dots__item" aria-label="اسلاید ۲"></button>
+      <button class="dots__item" aria-label="اسلاید ۳"></button>
+    </div>
 
     <!-- Quick categories -->
     <ul class="quick">
-      <li><a href="#" class="quick__item"><img src="assets/icons/uniform.svg" alt=""><span>پیراهن</span></a></li>
-      <li><a href="#" class="quick__item"><img src="assets/icons/jeans.svg" alt=""><span>شلوار</span></a></li>
-      <li><a href="#" class="quick__item"><img src="assets/icons/hoodie.svg" alt=""><span>هودی</span></a></li>
-      <li><a href="#" class="quick__item"><img src="assets/icons/raincoat.svg" alt=""><span>کت</span></a></li>
+      <li><a href="pages/shop-shirt.html" class="quick__item"><img src="assets/icons/uniform.svg" alt=""><span>پیراهن</span></a></li>
+      <li><a href="pages/shop-pants.html" class="quick__item"><img src="assets/icons/jeans.svg" alt=""><span>شلوار</span></a></li>
+      <li><a href="pages/shop-hoodie.html" class="quick__item"><img src="assets/icons/hoodie.svg" alt=""><span>هودی</span></a></li>
+      <li><a href="pages/shop-coat.html" class="quick__item"><img src="assets/icons/raincoat.svg" alt=""><span>کت</span></a></li>
     </ul>
 
     <!-- Main categories -->
     <ul class="categories">
-      <li><a href="#"><img src="assets/images/01.jpg" alt="لباس زنانه"></a></li>
-      <li><a href="#"><img src="assets/images/02.jpg" alt="لباس مردانه"></a></li>
-      <li><a href="#"><img src="assets/images/03.jpg" alt="فروش ویژه"></a></li>
-      <li><a href="#"><img src="assets/images/04.jpg" alt="لباس بچه‌گانه"></a></li>
+      <li><a href="pages/shop-women.html"><img src="assets/images/01.jpg" alt="لباس زنانه"></a></li>
+      <li><a href="pages/shop-men.html"><img src="assets/images/02.jpg" alt="لباس مردانه"></a></li>
+      <li><a href="pages/shop-sale.html"><img src="assets/images/03.jpg" alt="فروش ویژه"></a></li>
+      <li><a href="pages/shop-kids.html"><img src="assets/images/04.jpg" alt="لباس بچه‌گانه"></a></li>
     </ul>
 
     <!-- Newest products -->
     <section class="section">
       <h2 class="section__title">جدیدترین ها</h2>
       <div class="showcase showcase--purple">
-        <a href="#" class="showcase__promo"><h3>پیشنهادات ویژه</h3><img src="assets/images/box.jpg" alt=""></a>
+        <a href="pages/shop-sale.html" class="showcase__promo"><h3>پیشنهادات ویژه</h3><img src="assets/images/box.jpg" alt=""></a>
 
-        <article class="card">
+        <a href="pages/product/014.html" class="card">
           <span class="card__badge">جدید</span>
           <img class="card__img" src="assets/images/014.jpg" alt="">
           <h3 class="card__title">تی شرت دو رو چاپ مردانه مدل ۰۳۷</h3>
           <p class="card__price">۸۶۸,۰۰۰ تومان</p>
-        </article>
-        <article class="card">
+        </a>
+        <a href="pages/product/013.html" class="card">
           <span class="card__badge">جدید</span>
           <img class="card__img" src="assets/images/013.jpg" alt="">
           <h3 class="card__title">شمیز زنانه درسا مدل ۰۸۵۱</h3>
           <del class="card__old">۷۲۰,۰۰۰</del>
           <p class="card__price">۵۹۷,۰۰۰ تومان</p>
-        </article>
-        <article class="card">
+        </a>
+        <a href="pages/product/012.html" class="card">
           <span class="card__badge">جدید</span>
           <img class="card__img" src="assets/images/012.jpg" alt="">
           <h3 class="card__title">تی شرت آستین کوتاه یقه گرد مردانه مدل ۰۳۹</h3>
           <p class="card__price">۸۸۷,۰۰۰ تومان</p>
-        </article>
-        <article class="card">
+        </a>
+        <a href="pages/product/011.html" class="card">
           <span class="card__badge">جدید</span>
           <img class="card__img" src="assets/images/011.jpg" alt="">
           <h3 class="card__title">ست تیشرت و شلوارک مردانه هایکا مدل ۰۸۴۶</h3>
           <p class="card__price">۹۲۷,۰۰۰ تومان</p>
-        </article>
+        </a>
+
+                                
+        <a href="pages/product/ma1.html" class="card" hidden>
+          <span class="card__badge">جدید</span>
+          <img class="card__img" src="assets/images/ma1.jpg" alt="">
+          <h3 class="card__title">لباس مردانه مدل ۶۰۱</h3>
+          <p class="card__price">۷۴۰,۰۰۰ تومان</p>
+        </a>
+        <a href="pages/product/z1.html" class="card" hidden>
+          <span class="card__badge">جدید</span>
+          <img class="card__img" src="assets/images/z1.jpg" alt="">
+          <h3 class="card__title">لباس زنانه مدل ۵۰۱</h3>
+          <p class="card__price">۶۹۰,۰۰۰ تومان</p>
+        </a>
+        <a href="pages/product/h1.html" class="card" hidden>
+          <span class="card__badge">جدید</span>
+          <img class="card__img" src="assets/images/h1.jpg" alt="">
+          <h3 class="card__title">هودی کلاه‌دار مدل ۱۰۱</h3>
+          <p class="card__price">۱,۰۹۰,۰۰۰ تومان</p>
+        </a>
+        <a href="pages/product/p1.html" class="card" hidden>
+          <span class="card__badge">جدید</span>
+          <img class="card__img" src="assets/images/p1.jpg" alt="">
+          <h3 class="card__title">پیراهن مدل ۲۰۱</h3>
+          <p class="card__price">۷۸۰,۰۰۰ تومان</p>
+        </a>
 
         <button class="showcase__next" aria-label="بعدی">&#10095;</button>
       </div>
     </section>
 
     <!-- Wide banner -->
-    <a href="#" class="banner"><img src="assets/images/1741077917.jpg" alt="تا ۷۰٪ تخفیف محصولات تکسایز"></a>
+    <a href="pages/shop-sale.html" class="banner"><img src="assets/images/1741077917.jpg" alt="تا ۷۰٪ تخفیف محصولات تکسایز"></a>
 
     <!-- Banner slider -->
     <section class="duo">
-      <a href="#"><img src="assets/images/download.jpg" alt="انواع دامن"></a>
-      <a href="#"><img src="assets/images/Sensi-Wide-Banner-1-768x264.jpg" alt="ست‌های پیشنهادی"></a>
+      <a href="pages/shop.html"><img src="assets/images/download.jpg" alt="انواع دامن"></a>
+      <a href="pages/shop.html"><img src="assets/images/Sensi-Wide-Banner-1-768x264.jpg" alt="ست‌های پیشنهادی"></a>
     </section>
 
     <!-- Discounted products -->
     <section class="section">
       <h2 class="section__title">تخفیفات</h2>
       <div class="showcase showcase--green">
-        <a href="#" class="showcase__promo"><h3>تخفیفات شگفت انگیز</h3><img src="assets/images/box.jpg" alt=""></a>
+        <a href="pages/shop-sale.html" class="showcase__promo"><h3>تخفیفات شگفت انگیز</h3><img src="assets/images/box.jpg" alt=""></a>
 
-        <article class="card">
+        <a href="pages/product/018.html" class="card">
           <span class="card__badge">تخفیف</span>
           <img class="card__img" src="assets/images/018.jpg" alt="">
           <h3 class="card__title">سوییشرت پنبه ای دورس مردانه مدل ۰۷۶۸</h3>
           <p class="card__price">۹۶۸,۰۰۰ تومان</p>
           <div class="colors"><i style="background:#4a5568"></i><i style="background:#e8a35c"></i><i style="background:#2ecc40"></i></div>
-        </article>
-        <article class="card">
+        </a>
+        <a href="pages/product/017.html" class="card">
           <span class="card__badge">تخفیف</span>
           <img class="card__img" src="assets/images/017.jpg" alt="">
           <h3 class="card__title">سارافون مجلسی دخترانه</h3>
           <del class="card__old">۲,۸۰۰,۰۰۰</del>
           <p class="card__price">۱,۶۰۲,۰۰۰ تومان</p>
           <div class="colors"><i style="background:#5cb88a"></i><i style="background:#8a6b6b"></i><i style="background:#ddd"></i></div>
-        </article>
-        <article class="card">
+        </a>
+        <a href="pages/product/016.html" class="card">
           <span class="card__badge">تخفیف</span>
           <img class="card__img" src="assets/images/016.jpg" alt="">
           <h3 class="card__title">شمیز کتان پایزه پایین هلال مدل ۰۶۳۳</h3>
           <p class="card__price">۳,۸۰۷,۰۰۰ تومان</p>
           <div class="colors"><i style="background:#c9b84a"></i><i style="background:#b0323c"></i><i style="background:#3d6bd1"></i></div>
-        </article>
-        <article class="card">
+        </a>
+        <a href="pages/product/015.html" class="card">
           <span class="card__badge">تخفیف</span>
           <img class="card__img" src="assets/images/015.jpg" alt="">
           <h3 class="card__title">ست بلوز شلوار پاییزه نیل خرگوش مدل ۰۶۳۱</h3>
           <p class="card__price">۲,۴۷۰,۰۰۰ تومان</p>
           <div class="colors"><i style="background:#c47fb0"></i></div>
-        </article>
+        </a>
+
+                                
+        <a href="pages/product/h2.html" class="card" hidden>
+          <span class="card__badge">تخفیف</span>
+          <img class="card__img" src="assets/images/h2.jpg" alt="">
+          <h3 class="card__title">هودی کلاه‌دار مدل ۱۰۲</h3>
+          <del class="card__old">۱,۴۸۰,۰۰۰</del>
+          <p class="card__price">۱,۱۸۰,۰۰۰ تومان</p>
+          <div class="colors"><i style="background:#8b93a1"></i><i style="background:#e8a35c"></i><i style="background:#b0323c"></i></div>
+        </a>
+        <a href="pages/product/p3.html" class="card" hidden>
+          <span class="card__badge">تخفیف</span>
+          <img class="card__img" src="assets/images/p3.jpg" alt="">
+          <h3 class="card__title">پیراهن مدل ۲۰۳</h3>
+          <del class="card__old">۱,۱۵۰,۰۰۰</del>
+          <p class="card__price">۹۲۰,۰۰۰ تومان</p>
+          <div class="colors"><i style="background:#b0323c"></i><i style="background:#eee"></i><i style="background:#5cb88a"></i></div>
+        </a>
+        <a href="pages/product/z3.html" class="card" hidden>
+          <span class="card__badge">تخفیف</span>
+          <img class="card__img" src="assets/images/z3.jpg" alt="">
+          <h3 class="card__title">لباس زنانه مدل ۵۰۳</h3>
+          <del class="card__old">۱,۱۸۰,۰۰۰</del>
+          <p class="card__price">۹۴۰,۰۰۰ تومان</p>
+          <div class="colors"><i style="background:#222"></i><i style="background:#3d6bd1"></i><i style="background:#c47fb0"></i></div>
+        </a>
+        <a href="pages/product/ma2.html" class="card" hidden>
+          <span class="card__badge">تخفیف</span>
+          <img class="card__img" src="assets/images/ma2.jpg" alt="">
+          <h3 class="card__title">لباس مردانه مدل ۶۰۲</h3>
+          <del class="card__old">۱,۱۰۰,۰۰۰</del>
+          <p class="card__price">۸۸۰,۰۰۰ تومان</p>
+          <div class="colors"><i style="background:#e8a35c"></i><i style="background:#b0323c"></i><i style="background:#eee"></i></div>
+        </a>
 
         <button class="showcase__next" aria-label="بعدی">&#10095;</button>
       </div>
@@ -165,28 +240,28 @@
           <img src="assets/images/m4.jpg" alt="">
           <h3 class="post__title">شنل برند فرانسوی با استایل‌های کلاسیک و مدرن</h3>
           <time class="post__date">مهر ۱۴۰۵</time>
-          <a href="#" class="post__more">ادامه مطلب</a>
+          <a href="pages/article.html" class="post__more">ادامه مطلب</a>
         </article>
         <article class="post">
           <img src="assets/images/m3.jpg" alt="">
           <h3 class="post__title">کت شلوار مازراتی برای مهمانی؛ دلیل محبوبیت ۵</h3>
           <time class="post__date">مهر ۱۴۰۵</time>
-          <a href="#" class="post__more">ادامه مطلب</a>
+          <a href="pages/article.html" class="post__more">ادامه مطلب</a>
         </article>
         <article class="post">
           <img src="assets/images/m2.jpg" alt="">
           <h3 class="post__title">چطور لگ را با لباس‌های مختلف ست کنیم؟</h3>
           <time class="post__date">مهر ۱۴۰۵</time>
-          <a href="#" class="post__more">ادامه مطلب</a>
+          <a href="pages/article.html" class="post__more">ادامه مطلب</a>
         </article>
         <article class="post">
           <img src="assets/images/m1.jpg" alt="">
           <h3 class="post__title">راهنمای خرید تیشرت زنانه مناسب؛ ویژگی‌هایی که باید بدانید</h3>
           <time class="post__date">مهر ۱۴۰۵</time>
-          <a href="#" class="post__more">ادامه مطلب</a>
+          <a href="pages/article.html" class="post__more">ادامه مطلب</a>
         </article>
       </div>
-      <a href="#" class="btn btn--dark btn--sm posts__all">مشاهده همه</a>
+      <a href="pages/blog.html" class="btn btn--dark btn--sm posts__all">مشاهده همه</a>
     </section>
 
     <!-- Brands -->
@@ -215,35 +290,35 @@
         <img src="assets/images/aynim-high-resolution-logo.png" alt="Aynim" class="footer__logo">
         <p>به فروشگاه آنلاین آینیم خوش آمدید. در فروشگاه ما انواع لباس و کیف و کفش مردانه و زنانه موجود می باشد لطفا از محصولات ما دیدن نمایید.</p>
         <p>برای دریافت اطلاعات فروشگاه به پیج اینستاگرام فروشگاه به آدرس زیر مراجعه کنید</p>
-        <a href="#" class="footer__social"><img class="footer__social-icon" src="assets/icons/Insta.svg" alt="">AYNIM</a>
+        <a href="https://www.instagram.com/aynim/" target="_blank" rel="noopener" class="footer__social"><img class="footer__social-icon" src="assets/icons/Insta.svg" alt="">AYNIM</a>
       </div>
 
       <nav class="footer__col">
         <h3>لینک های کاربردی</h3>
         <ul class="footer__links">
             <li>
-                <a href="#">
+                <a href="index.html">
                     <i class="ri-arrow-left-s-line"></i>
                     خانه
                 </a>
             </li>
 
             <li>
-                <a href="#">
+                <a href="pages/shop.html">
                     <i class="ri-arrow-left-s-line"></i>
                     همه محصولات
                 </a>
             </li>
 
             <li>
-                <a href="#">
+                <a href="pages/shop-men.html">
                     <i class="ri-arrow-left-s-line"></i>
                     لباس مردانه
                 </a>
             </li>
 
             <li>
-                <a href="#">
+                <a href="pages/shop-women.html">
                     <i class="ri-arrow-left-s-line"></i>
                     لباس زنانه
                 </a>
@@ -272,21 +347,21 @@
         <h3>راهنمای کاربر</h3>
         <ul class="footer__links">
             <li>
-                <a href="#">
+                <a href="pages/help.html#account">
                     <i class="ri-arrow-left-s-line"></i>
                     نحوه ساخت حساب
                 </a>
             </li>
-            
+
             <li>
-                <a href="#">
+                <a href="pages/help.html#order">
                     <i class="ri-arrow-left-s-line"></i>
                     نحوه ثبت سفارش
                 </a>
             </li>
 
             <li>
-                <a href="#">
+                <a href="pages/help.html#complaint">
                     <i class="ri-arrow-left-s-line"></i>
                     ثبت شکایت
                 </a>
@@ -298,14 +373,14 @@
         <h3>سوالات متداول</h3>
         <ul class="footer__links">
             <li>
-                <a href="#">
+                <a href="pages/faq.html#discount">
                     <i class="ri-arrow-left-s-line"></i>
                      چگونه کد تخفیف هارو داشته باشم؟
                 </a>
             </li>
 
             <li>
-                <a href="#">
+                <a href="pages/faq.html#delivery">
                     <i class="ri-arrow-left-s-line"></i>
                      محصول کی به دستم می رسه؟
                 </a>
@@ -318,5 +393,7 @@
     <p class="footer__copy">کلیه حقوق محفوظ و مربوط به آینیم می باشد</p>
   </footer>
 
+  <script src="js/slider.js"></script>
+  <script src="js/showcase.js"></script>
 </body>
 </html>
